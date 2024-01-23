@@ -1,0 +1,37 @@
+pipelines:
+  branches:
+    develop:
+      - step:
+          name: Build docker images
+          deployment: sandbox-build-docker
+          size: 2x # Double resources available for this step.
+          script:
+            - echo "Build protecto-openai image with latest code!"
+            - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
+            - echo "Build protecto-vault-authentication-service docker"
+            - docker build -t $DOCKER_REGISTRY/$APP_NAME:$ENV_NAME --build-arg VITE_IS_DB_AVAILABLE=$VITE_IS_DB_AVAILABLE --build-arg VITE_BACKEND_URL=$VITE_BACKEND_URL --build-arg VITE_MAX_FILE_SIZE_IN_KB=$VITE_MAX_FILE_SIZE_IN_KB --no-cache -f WebApp.Dockerfile .
+            - docker push $DOCKER_REGISTRY/$APP_NAME:$ENV_NAME
+          services:
+            - docker
+
+    master:
+      - step:
+          name: Build docker images
+          deployment: demo-build-docker
+          size: 2x # Double resources available for this step.
+          script:
+            - VERSION="$VERSION_NUM-prod"
+            - echo "Build protecto-openai image with latest code!"
+            - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
+            - echo "Build protecto-vault-authentication-service docker"
+            - docker build -t $DOCKER_REGISTRY/$APP_NAME:${VERSION} --build-arg VITE_IS_DB_AVAILABLE=$VITE_IS_DB_AVAILABLE --build-arg VITE_BACKEND_URL=$VITE_BACKEND_URL --build-arg VITE_MAX_FILE_SIZE_IN_KB=$VITE_MAX_FILE_SIZE_IN_KB --no-cache -f WebApp.Dockerfile .
+            - docker push $DOCKER_REGISTRY/$APP_NAME:${VERSION}
+            # Push tags
+            - git tag -a "${VERSION}" -m "Tagging for release ${VERSION}"
+            - git push origin ${VERSION}
+          services:
+            - docker
+definitions:
+  services:
+    docker:
+      memory: 3072

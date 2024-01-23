@@ -1,0 +1,26 @@
+2024-01-19 14:01:27,759 - my_logger - INFO - request received- /menus
+2024-01-19 14:35:44,470 - my_logger - INFO - request received- /menus
+2024-01-19 14:35:48,945 - my_logger - INFO - request received- /generate
+2024-01-19 14:35:48,946 - my_logger - INFO - Begin conversation_without_data
+2024-01-19 14:35:48,946 - my_logger - INFO - Begin - mask_api call with hi
+2024-01-19 14:35:52,378 - my_logger - INFO - mask_successful - Response: {'data': [{'value': 'hi', 'token_value': 'hi'}], 'success': True, 'error': {'message': ''}}
+2024-01-19 14:35:52,380 - my_logger - INFO - End - mask_api call response hi
+2024-01-19 14:35:56,430 - my_logger - INFO - Begin openai_api call with [{'role': 'user', 'content': 'hi'}]
+2024-01-19 14:35:57,030 - my_logger - ERROR - Traceback (most recent call last):
+  File "/home/protecto/Documents/gpt-opensource/gpt-guard/azure-chatgpt/app.py", line 358, in conversation_internal
+    return conversation_without_data(request_body)
+  File "/home/protecto/Documents/gpt-opensource/gpt-guard/azure-chatgpt/app.py", line 287, in conversation_without_data
+    response = openai.ChatCompletion.create(
+  File "/home/protecto/Documents/gpt-opensource/gpt-guard/azure-chatgpt/.venv/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/home/protecto/Documents/gpt-opensource/gpt-guard/azure-chatgpt/.venv/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/home/protecto/Documents/gpt-opensource/gpt-guard/azure-chatgpt/.venv/lib/python3.10/site-packages/openai/api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+  File "/home/protecto/Documents/gpt-opensource/gpt-guard/azure-chatgpt/.venv/lib/python3.10/site-packages/openai/api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "/home/protecto/Documents/gpt-opensource/gpt-guard/azure-chatgpt/.venv/lib/python3.10/site-packages/openai/api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.InvalidRequestError: you must provide a model parameter
+
+2024-01-19 14:35:57,030 - my_logger - ERROR - Error in conversation_internal - you must provide a model parameter

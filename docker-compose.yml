@@ -1,0 +1,10 @@
+version: '3'
+services:
+  protecto-openai:
+    build:
+      context: .
+      dockerfile: WebApp.Dockerfile
+    restart: always
+    container_name: protecto-openai
+    ports:
+      - 80:80
