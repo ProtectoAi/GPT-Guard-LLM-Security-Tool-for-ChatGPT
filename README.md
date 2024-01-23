@@ -27,6 +27,8 @@ This open-source project leverages **Protecto Tokenization APIs** for PII identi
 
 If you prefer not to sign up and use Protecto APIs, you can replace the masking with your own APIs, following the same input and output structure of Protecto's APIs. Refer to the full [Protecto Tokenization Documentation](https://developer.protecto.ai/docs/protecto-tokenization/) here.
 
+GPT Guard offers two modes: Privacy Filter and No-Filter.
+
 ### Privacy Filter
 
 The 'Privacy Filter' - This filter masks PII in your prompts before sending them to LLM, ensure PII remains hidden from the LLM, safeguarding your privacy.
@@ -59,7 +61,7 @@ Original prompt: "John lives in London"
   "John, who lives in London, might enjoy visiting the British Museum."
   It contains original PII, but LLM never accessed it directly.
 
-GPT Guard safeguards privacy by shielding PII from LLM. Masking and unmasking ensure informative responses without compromising sensitive data. Users can interact with LLM confidently, knowing their privacy is protected.
+GPT Guard safeguards privacy by shielding PII from LLM. Masking and unmasking ensure informative responses without compromising sensitive data. Users can interact with LLM confidently, knowing their privacy is protected. 
 
 #### Privacy Filter has two modes:
 
