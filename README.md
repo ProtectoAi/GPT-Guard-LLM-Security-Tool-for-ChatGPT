@@ -15,7 +15,7 @@ The original source code can be found at: [https://github.com/microsoft/sample-a
 GPT Guard enables secure and engaging ChatGPT conversations by safeguarding your sensitive information from large language models, acting as a vigilant guardian for your privacy
 
  #### Automatic PII Detection and Masking:
- -  When you send a prompt, GPT Guard's cutting-edge technology meticulously scans personally identifiable inforamtion(PII). It then expertly masks this sensitive data using Protecto's Data Tokenization APIs, ensuring that your confidential details remain hidden from the LLM.
+ -  When you send a prompt, GPT Guard meticulously scans personally identifiable inforamtion(PII). It then expertly masks this sensitive data using Protecto's Data Tokenization APIs, ensuring that your confidential details remain hidden from the LLM.
 
  #### Understanding Masked Data with a Fine-Tuned OpenAI Model: 
  - GPT Guard doesn't simply mask your data; it understands it. Its specially fine-tuned OpenAI model possesses the unique ability to interpret and respond to masked prompts, ensuring that you receive accurate and relevant responses even when your personal information is protected.
@@ -37,7 +37,7 @@ Protecto employs a sophisticated approach to data tokenization, ensuring intelli
 For more information about Protecto Tokenization, please check [here](https://developer.protecto.ai/docs/protecto-tokenization/).
 #### Masking && Unmasking
 
-- Before your prompts reach the LLM, GPT Guard carefully scans for any personally identifiable information (PII).
+- Before your prompts reach the LLM, GPT Guard carefully scans for personally identifiable information (PII).
 - It identifies the PII, then calls upon **Protecto's Data Tokenization Masking API** to replace that sensitive information with placeholder tokens, ensuring the confidentiality of sensitive details.
 
  - After the LLM crafts a response based on your masked prompt, **Protecto's Data Tokenization Unmask API** precisely swaps the placeholder tokens back with your original PII, restoring the complete information with meticulous accuracy. 
@@ -63,7 +63,7 @@ GPT Guard safeguards privacy by shielding PII from LLM. Masking and unmasking en
 
 #### Privacy Filter has two modes:
 
-1. **Normal Prompts:** Automatically identifies and masks any PII in your typed prompts before sending them to the LLM, ensuring your privacy is protected.
+1. **Normal Prompts:** Automatically identifies and masks PII in your typed prompts before sending them to the LLM, ensuring your privacy is protected.
 
 2. **PDF-Based Prompts:** Facilitates private conversations even when discussing information from PDFs. You can upload a PDF file, and the filter will seamlessly extract its text content. Applies the same PII identification, masking, and unmasking process to the extracted text, ensuring confidentiality. The masked text is then sent to the LLM for response generation, allowing you to safely chat about the PDF's contents without revealing sensitive information.
 
@@ -136,10 +136,10 @@ You can view the locally running app at [http://localhost:5000](http://localhost
 #### Want to directly use GPT Guard (as a SaaS)
 If you want to use GPT Guard without any installation, please go to [https://www.gptguard.ai/](https://www.gptguard.ai/)
 
+
 #### Contact Us
 - Email us at: [help@protecto.ai](mailto:help@protecto.ai)
 - Company website: [https://www.protecto.ai/](https://www.protecto.ai/)
-
 
 Try out this code and enjoy enhanced privacy and security with GPT Guard. If you have any questions or encounter issues, feel free to reach out to us. 
 
