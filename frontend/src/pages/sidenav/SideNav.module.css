@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    height: 100%;
+    background: #F5F8FA;
+}
+
+.leftContainer {
+    width: 20%;
+}
+
+.rightContainer {
+    width: 80%;
+    height: 100%;
+}
+
+.headerContainer {
+    padding: 30px 0px 0px 25px;
+}
+
+.fileInvalideContainer {
+    display: flex;
+    flex-direction: column;
+
+    .closebBtn {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.isOkBtn {
+    padding-right: 10px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    padding-left: 45px;
+    margin-top: 10px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.selectedMenu {
+    display: flex;
+    background-color: #5C6AE5;
+    color: white;
+    align-items: center;
+    padding: 5px 0px 5px 45px;
+    margin-top: 10px;
+    line-height: 20px;
+    cursor: pointer;
+}

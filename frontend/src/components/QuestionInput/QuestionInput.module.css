@@ -1,0 +1,105 @@
+.questionInputContainer {
+    height: 100px;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    border-radius: 15px;
+    border: 1px solid #E6E6F2;
+    margin: 20px;
+    background: #FFF;
+    box-shadow: 0px 4px 12px 0px rgba(36, 39, 66, 0.05);
+    max-width: 66%;
+}
+
+.questionInputTextArea {
+    width: 100%;
+    line-height: 40px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.questionInputSendButtonContainer {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 15px;
+    position: absolute;
+    width: 91px;
+    height: 35px;
+    left: calc(100% - 110px);
+    top: 31px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #18B4AC;
+    background: #19B8B1;
+    box-shadow: 0px 4px 12px 0px rgba(36, 39, 66, 0.15);
+}
+
+.questionInputSendButton {
+    width: 16px;
+    height: 16px;
+}
+
+.questionInputSendButtonDisabled {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 15px;
+    position: absolute;
+    width: 91px;
+    height: 35px;
+    left: calc(100% - 110px);
+    top: 31px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #18B4AC;
+    opacity: 0.3;
+    background: #19B8B1;
+    box-shadow: 0px 4px 12px 0px rgba(36, 39, 66, 0.15);
+}
+
+.questionInputBottomBorder {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0%;
+    bottom: 0%;
+    background: radial-gradient(106.04% 106.06% at 100.1% 90.19%, #0F6CBD 33.63%, #8DDDD8 100%);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.questionInputOptionsButton {
+    cursor: pointer;
+    width: 27px;
+    height: 30px;
+}
+
+.questionInputSendButtonText {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.sendButtonContent {
+    display: inline-flex;
+    gap: 5px;
+}
+
+.field-105 {
+    padding-top: 17px;
+}
