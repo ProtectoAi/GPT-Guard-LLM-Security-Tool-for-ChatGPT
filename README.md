@@ -44,11 +44,11 @@ Original prompt: "John Smith lives in London"
 
 - **GPT Guard masks PII:** Replaces "John Smith" and "London" with placeholder tokens.
 
-- Masked prompt sent to LLM: LLM processes without accessing sensitive information. (**<PER>bRcLfydN0v v5lOgmn7QU</PER>** lives in **<ADDRESS>2zgs9AiGpz</ADDRESS>**)
+- Masked prompt sent to LLM: LLM processes without accessing sensitive information. (**\\<PER>bRcLfydN0v v5lOgmn7QU\\</PER>** lives in **\\<ADDRESS>2zgs9AiGpz\\</ADDRESS>**)
 
-- LLM response: Our fine-tuned model is specifically trained to recognize the masked data and respond accordingly. For example,"<PER>bRcLfydN0v v5lOgmn7QU</PER> in <ADDRESS>2zgs9AiGpz</ADDRESS> might enjoy the British Museum."
+- LLM response: Our fine-tuned model is specifically trained to recognize the masked data and respond accordingly. For example,"\\<PER>bRcLfydN0v v5lOgmn7QU\\</PER> in \\<ADDRESS>2zgs9AiGpz\\</ADDRESS> might enjoy the British Museum."
 
-- **GPT Guard unmasks PII:** Restores original names and addresses in the final response. Replaces placeholder tokens with original PII:(**<PER>bRcLfydN0v v5lOgmn7QU</PER>" becomes "John Smith" <ADDRESS>2zgs9AiGpz</ADDRESS>" becomes "London"**)
+- **GPT Guard unmasks PII:** Restores original names and addresses in the final response. Replaces placeholder tokens with original PII:(**\\<PER>bRcLfydN0v v5lOgmn7QU\\</PER>" becomes "John Smith" \\<ADDRESS>2zgs9AiGpz\\</ADDRESS>" becomes "London"**)
 
 - Response shown to the users:
   "John Smith, who lives in London, might enjoy visiting the British Museum."
@@ -138,6 +138,7 @@ If you want to use GPT Guard without any installation, please go to [https://www
 Try out this code and enjoy enhanced privacy and security with GPT Guard. If you have any questions or encounter issues, feel free to reach out to us. 
 
 **Get All the Benefits of ChatGPT Securely Without Sharing Sensitive Data with GPT Guard**
+
 
 
 
