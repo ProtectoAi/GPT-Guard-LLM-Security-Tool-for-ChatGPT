@@ -12,7 +12,7 @@ The original source code can be found at: [https://github.com/microsoft/sample-a
 
 ### GPT Guard 
 
-GPT Guard enables secure and engaging ChatGPT conversations by safeguarding your sensitive information from large language models, acting as a vigilant guardian for your privacy
+GPT Guard enables secure and engaging ChatGPT conversations by safeguarding your sensitive information from large language models, acting as a vigilant guardian for your privacy.
 
  #### Automatic PII Detection and Masking:
  -  When you send a prompt, GPT Guard meticulously scans personally identifiable inforamtion(PII). It then expertly masks this sensitive data using Protecto's Data Tokenization APIs, ensuring that your confidential details remain hidden from the LLM.
@@ -25,7 +25,7 @@ GPT Guard enables secure and engaging ChatGPT conversations by safeguarding your
 
 This open-source project leverages **Protecto Tokenization APIs** for PII identification and masking. To use Protecto's APIs, you need to create an account with Protecto.ai [https://www.protecto.ai/](https://www.protecto.ai/).
 
-If you prefer not to sign up and use Protecto APIs, you can replace the masking with your own APIs, following the same input and output structure of Protecto's APIs. Refer to the full [Protecto Tokenization Documentation](https://developer.protecto.ai/docs/protecto-tokenization/) here.
+If you prefer not to sign up and use Protecto APIs, you can replace the masking with your own APIs, following the same input and output structure of Protecto's APIs. Refer to the Protecto's Data Tokenization Documentation [https://developer.protecto.ai/docs/protecto-tokenization/](https://developer.protecto.ai/docs/protecto-tokenization/) here.
 
 GPT Guard offers two modes: Privacy Filter and No-Filter.
 
@@ -53,9 +53,9 @@ Original prompt: "John lives in London"
 
 - Masked prompt sent to LLM: LLM processes without accessing sensitive information. (**&lt;PER&gt; bRcLfydN0v &lt;/PER&gt;** lives in **&lt;ADDRESS&gt; 2zgs9AiGpz  &lt;/ADDRESS&gt;**)
 
-- LLM response: Our fine-tuned model is specifically trained to recognize the masked data and respond accordingly. For example it might generates,"&lt;PER&gt; bRcLfydN0v &lt;/PER&gt;  in &lt;ADDRESS&gt; 2zgs9AiGpz &lt;/ADDRESS&gt; might enjoy the British Museum."
+- LLM response: Our fine-tuned model is specifically trained to recognize the masked data and respond accordingly. For example it might generates,"&lt;PER&gt; bRcLfydN0v &lt;/PER&gt;, who lives in &lt;ADDRESS&gt; 2zgs9AiGpz &lt;/ADDRESS&gt;, might enjoy the British Museum."
 
-- **GPT Guard unmasks PII:** Restores original names and addresses in the final response. Replaces placeholder tokens with original PII:(**&lt;PER&gt; bRcLfydN0v &lt;/PER&gt; " becomes "John" &lt;ADDRESS&gt; 2zgs9AiGpz &lt;/ADDRESS&gt;" becomes "London"**)
+- **GPT Guard unmasks PII:** Restores original names and addresses in the final response. Replaces placeholder tokens with original PII:(**&lt;PER&gt; bRcLfydN0v &lt;/PER&gt; " becomes "John", &lt;ADDRESS&gt; 2zgs9AiGpz &lt;/ADDRESS&gt;" becomes "London"**)
 
 - Response shown to the users:
   "John, who lives in London, might enjoy visiting the British Museum."
@@ -124,7 +124,7 @@ For users preferring a direct approach without extra processing, the "No-Filter"
 
 #### Initiate the app
 
-   - **Linux:** Initiate the app with `./start.sh`. If you face permissions issues, execute the following command `chmod +x start.sh`,then run the app.
+   - **Linux:** Initiate the app with `./start.sh`. If you face permission issues, execute the following command `chmod +x start.sh`,then run the app.
 
    - **Windows:** Initiate the app with `./start.cmd`. 
 
@@ -142,6 +142,8 @@ If you want to use GPT Guard without any installation, please go to [https://www
 #### Contact Us
 - Email us at: [help@protecto.ai](mailto:help@protecto.ai)
 - Company website: [https://www.protecto.ai/](https://www.protecto.ai/)
+
+For detailed documentation on GPT Guard, please visit [https://developer.protecto.ai/docs/building-document-reader/](https://developer.protecto.ai/docs/building-document-reader/)
 
 Try out this code and enjoy enhanced privacy and security with GPT Guard. If you have any questions or encounter issues, feel free to reach out to us. 
 
