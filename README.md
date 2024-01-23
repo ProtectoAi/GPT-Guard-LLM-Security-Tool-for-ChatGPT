@@ -97,7 +97,7 @@ For users preferring a direct approach without extra processing, the "No-Filter"
 
    3. `BASE_MODEL`: Specify the OpenAI model to be used (gpt-3.5-turbo-1106 preferred).
 
-   4. `TOKENISATION_TOKEN`: Register at [https://trial.protecto.ai/](https://trial.protecto.ai/), and acquire the Auth Key from the Profile section -> Subscription -> Tokenization.
+   4. `TOKENISATION_TOKEN`: Register at [https://trial.protecto.ai/](https://trial.protecto.ai/), and acquire the Auth Key from the Profile section -> Subscription -> Tokenization. For more details, refer here [https://developer.protecto.ai/docs/step-by-step-guide-to-obtain-your-auth-token/](https://developer.protecto.ai/docs/step-by-step-guide-to-obtain-your-auth-token/)
 
 
 #### Fine-Tune the OpenAI Model
@@ -143,11 +143,10 @@ If you want to use GPT Guard without any installation, please go to [https://www
 - Email us at: [help@protecto.ai](mailto:help@protecto.ai)
 - Company website: [https://www.protecto.ai/](https://www.protecto.ai/)
 
-For detailed documentation on GPT Guard, please visit [https://developer.protecto.ai/docs/building-document-reader/](https://developer.protecto.ai/docs/building-document-reader/)
-
 Try out this code and enjoy enhanced privacy and security with GPT Guard. If you have any questions or encounter issues, feel free to reach out to us. 
 
 **Get All the Benefits of ChatGPT Securely Without Sharing Sensitive Data with GPT Guard**
+
 
 
 
