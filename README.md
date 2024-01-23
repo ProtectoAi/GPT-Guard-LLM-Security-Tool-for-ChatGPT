@@ -36,7 +36,7 @@ The 'Privacy Filter' - This filter masks PII in your prompts before sending them
 ### Protecto's Data Tokenization
 Protecto employs a sophisticated approach to data tokenization, ensuring intelligent handling of sensitive information. By leveraging this smart solution, you can unlock the full potential of your data while seamlessly upholding data privacy and security - all through the convenience of an API.
 
-For more information about Protecto Tokenization, please check [here](https://developer.protecto.ai/docs/protecto-tokenization/).
+For more information about Protecto's Data Tokenization, please visit [https://developer.protecto.ai/docs/protecto-tokenization/](https://developer.protecto.ai/docs/protecto-tokenization/).
 #### Masking && Unmasking
 
 - Before your prompts reach the LLM, GPT Guard carefully scans for personally identifiable information (PII).
