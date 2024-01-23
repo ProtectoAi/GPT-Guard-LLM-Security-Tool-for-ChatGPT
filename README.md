@@ -117,7 +117,8 @@ For users preferring a direct approach without extra processing, the "No-Filter"
 
 #### Initiate the app
 
-   - **Linux:** Initiate the app with `./start.sh`.
+   - **Linux:** Initiate the app with `./start.sh`. If you face permissions issues, execute the following command `chmod +x start.sh`,then run the app.
+
    - **Windows:** Initiate the app with `./start.cmd`. 
 
 This process will build the frontend, install backend dependencies, and then launch the app.
