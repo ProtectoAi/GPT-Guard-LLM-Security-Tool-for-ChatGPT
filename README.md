@@ -44,7 +44,7 @@ Original prompt: "John Smith lives in London"
 
 - **GPT Guard masks PII:** Replaces "John Smith" and "London" with placeholder tokens.
 
-- Masked prompt sent to LLM: LLM processes without accessing sensitive information. (**&lt;PER&gt; bRcLfydN0v v5lOgmn7QU &lt;/PER&gt; ** lives in **&lt;ADDRESS&gt; 2zgs9AiGpz  &lt;/ADDRESS&gt;**)
+- Masked prompt sent to LLM: LLM processes without accessing sensitive information. (**&lt;PER&gt; bRcLfydN0v v5lOgmn7QU &lt;/PER&gt;** lives in **&lt;ADDRESS&gt; 2zgs9AiGpz  &lt;/ADDRESS&gt;**)
 
 - LLM response: Our fine-tuned model is specifically trained to recognize the masked data and respond accordingly. For example,"&lt;PER&gt; bRcLfydN0v v5lOgmn7QU &lt;/PER&gt;  in &lt;ADDRESS&gt; 2zgs9AiGpz &lt;/ADDRESS&gt; might enjoy the British Museum."
 
