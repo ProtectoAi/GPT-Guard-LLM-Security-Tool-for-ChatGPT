@@ -44,11 +44,11 @@ Original prompt: "John Smith lives in London"
 
 - **GPT Guard masks PII:** Replaces "John Smith" and "London" with placeholder tokens.
 
-- Masked prompt sent to LLM: LLM processes without accessing sensitive information. (**\\<PER>bRcLfydN0v v5lOgmn7QU\\</PER>** lives in **\\<ADDRESS>2zgs9AiGpz\\</ADDRESS>**)
+- Masked prompt sent to LLM: LLM processes without accessing sensitive information. (**&lt;PER&gt; bRcLfydN0v v5lOgmn7QU&lt;/PER&gt; ** lives in **\\<ADDRESS>2zgs9AiGpz\\</ADDRESS>**)
 
-- LLM response: Our fine-tuned model is specifically trained to recognize the masked data and respond accordingly. For example,"\\<PER>bRcLfydN0v v5lOgmn7QU\\</PER> in \\<ADDRESS>2zgs9AiGpz\\</ADDRESS> might enjoy the British Museum."
+- LLM response: Our fine-tuned model is specifically trained to recognize the masked data and respond accordingly. For example,"&lt;PER&gt; bRcLfydN0v v5lOgmn7QU&lt;/PER&gt;  in \\<ADDRESS>2zgs9AiGpz\\</ADDRESS> might enjoy the British Museum."
 
-- **GPT Guard unmasks PII:** Restores original names and addresses in the final response. Replaces placeholder tokens with original PII:(**\\<PER>bRcLfydN0v v5lOgmn7QU\\</PER>" becomes "John Smith" \\<ADDRESS>2zgs9AiGpz\\</ADDRESS>" becomes "London"**)
+- **GPT Guard unmasks PII:** Restores original names and addresses in the final response. Replaces placeholder tokens with original PII:(**&lt;PER&gt; bRcLfydN0v v5lOgmn7QU&lt;/PER&gt; " becomes "John Smith" \\<ADDRESS>2zgs9AiGpz\\</ADDRESS>" becomes "London"**)
 
 - Response shown to the users:
   "John Smith, who lives in London, might enjoy visiting the British Museum."
