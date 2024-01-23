@@ -12,7 +12,7 @@ The original source code can be found at: [https://github.com/microsoft/sample-a
 
 ### GPT Guard 
 
-GPT Guard empowers you to engage in informative and captivating ChatGPT interactions without sacrificing your sensitive information. It acts as a vigilant guardian, protecting your privacy by meticulously shielding personally identifiable information (PII) from the prying eyes of large language models (LLMs).
+GPT Guard enables secure and engaging ChatGPT conversations by safeguarding your sensitive information from large language models, acting as a vigilant guardian for your privacy
 
  #### Automatic PII Detection and Masking:
  -  When you send a prompt, GPT Guard's cutting-edge technology meticulously scans personally identifiable inforamtion(PII). It then expertly masks this sensitive data using Protecto's Data Tokenization APIs, ensuring that your confidential details remain hidden from the LLM.
@@ -21,7 +21,7 @@ GPT Guard empowers you to engage in informative and captivating ChatGPT interact
  - GPT Guard doesn't simply mask your data; it understands it. Its specially fine-tuned OpenAI model possesses the unique ability to interpret and respond to masked prompts, ensuring that you receive accurate and relevant responses even when your personal information is protected.
 
  #### Unmasking for Meaningful Responses
- - Once the model generates a response based on the masked prompt, GPT Guard seamlessly unmasks the PII, revealing the full answer in a way that respects your privacy. This means you can explore a wide range of topics and receive comprehensive answers without fear of exposing sensitive information.
+ - Once the model generates a response based on the masked prompt, GPT Guard seamlessly unmasks the PII, revealing the full answer in a way that respects your privacy. 
 
 This open-source project leverages **Protecto Tokenization APIs** for PII identification and masking. To use Protecto's APIs, you need to create an account with Protecto.ai [https://www.protecto.ai/](https://www.protecto.ai/).
 
@@ -35,31 +35,28 @@ The 'Privacy Filter' - This filter masks PII in your prompts before sending them
 Protecto employs a sophisticated approach to data tokenization, ensuring intelligent handling of sensitive information. By leveraging this smart solution, you can unlock the full potential of your data while seamlessly upholding data privacy and security - all through the convenience of an API.
 
 For more information about Protecto Tokenization, please check [here](https://developer.protecto.ai/docs/protecto-tokenization/).
-#### Masking
+#### Masking && Unmasking
 
 - Before your prompts reach the LLM, GPT Guard carefully scans for any personally identifiable information (PII).
 - It identifies the PII, then calls upon **Protecto's Data Tokenization Masking API** to replace that sensitive information with placeholder tokens, ensuring the confidentiality of sensitive details.
 
-#### Unmasking
-
- - After the LLM crafts a response based on your masked prompt, **Protecto's Data Tokenization Unmask API** precisely swaps the placeholder tokens back with your original PII, restoring the complete information with meticulous accuracy. This ensures you receive a comprehensive and informative response while safeguarding your sensitive data throughout the process.
-
+ - After the LLM crafts a response based on your masked prompt, **Protecto's Data Tokenization Unmask API** precisely swaps the placeholder tokens back with your original PII, restoring the complete information with meticulous accuracy. 
 ### Example
 
-Original prompt: "John Smith lives in London"
+Original prompt: "John lives in London"
 
-- PII detected: "John Smith" (name) and "London" (address)
+- PII detected: "John" (name) and "London" (address)
 
-- **GPT Guard masks PII:** Replaces "John Smith" and "London" with placeholder tokens.
+- **GPT Guard masks PII:** Replaces "John" and "London" with placeholder tokens.
 
-- Masked prompt sent to LLM: LLM processes without accessing sensitive information. (**&lt;PER&gt; bRcLfydN0v v5lOgmn7QU &lt;/PER&gt;** lives in **&lt;ADDRESS&gt; 2zgs9AiGpz  &lt;/ADDRESS&gt;**)
+- Masked prompt sent to LLM: LLM processes without accessing sensitive information. (**&lt;PER&gt; bRcLfydN0v &lt;/PER&gt;** lives in **&lt;ADDRESS&gt; 2zgs9AiGpz  &lt;/ADDRESS&gt;**)
 
-- LLM response: Our fine-tuned model is specifically trained to recognize the masked data and respond accordingly. For example it might generates,"&lt;PER&gt; bRcLfydN0v v5lOgmn7QU &lt;/PER&gt;  in &lt;ADDRESS&gt; 2zgs9AiGpz &lt;/ADDRESS&gt; might enjoy the British Museum."
+- LLM response: Our fine-tuned model is specifically trained to recognize the masked data and respond accordingly. For example it might generates,"&lt;PER&gt; bRcLfydN0v &lt;/PER&gt;  in &lt;ADDRESS&gt; 2zgs9AiGpz &lt;/ADDRESS&gt; might enjoy the British Museum."
 
-- **GPT Guard unmasks PII:** Restores original names and addresses in the final response. Replaces placeholder tokens with original PII:(**&lt;PER&gt; bRcLfydN0v v5lOgmn7QU &lt;/PER&gt; " becomes "John Smith" &lt;ADDRESS&gt; 2zgs9AiGpz &lt;/ADDRESS&gt;" becomes "London"**)
+- **GPT Guard unmasks PII:** Restores original names and addresses in the final response. Replaces placeholder tokens with original PII:(**&lt;PER&gt; bRcLfydN0v &lt;/PER&gt; " becomes "John" &lt;ADDRESS&gt; 2zgs9AiGpz &lt;/ADDRESS&gt;" becomes "London"**)
 
 - Response shown to the users:
-  "John Smith, who lives in London, might enjoy visiting the British Museum."
+  "John, who lives in London, might enjoy visiting the British Museum."
   It contains original PII, but LLM never accessed it directly.
 
 GPT Guard safeguards privacy by shielding PII from LLM. Masking and unmasking ensure informative responses without compromising sensitive data. Users can interact with LLM confidently, knowing their privacy is protected.
