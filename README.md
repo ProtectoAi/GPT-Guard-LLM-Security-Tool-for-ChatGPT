@@ -97,7 +97,7 @@ For users preferring a direct approach without extra processing, the "No-Filter"
 
    3. `BASE_MODEL`: Specify the OpenAI model to be used (gpt-3.5-turbo-1106 preferred).
 
-   4. `TOKENISATION_TOKEN`: Register at [https://trial.protecto.ai/](https://trial.protecto.ai/), and acquire the Auth Key from the Profile section -> Subscription -> Tokenization. For more details, refer here [https://developer.protecto.ai/docs/step-by-step-guide-to-obtain-your-auth-token/](https://developer.protecto.ai/docs/step-by-step-guide-to-obtain-your-auth-token/)
+   4. `TOKENISATION_TOKEN`: Register at https://portal.protecto.ai/ to obtain an Auth Key.
 
 
 #### Fine-Tune the OpenAI Model
